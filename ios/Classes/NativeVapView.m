@@ -103,6 +103,8 @@
 
 - (void) vapWrap_viewDidStopPlayMP4:(NSInteger)lastFrameIndex view:(VAPView *)container{
     playStatus = false;
+    NSDictionary *resultDic = @{@"status":@"stop"};
+    _result(resultDic);
 }
     
 -(void) vapWrap_viewDidFinishPlayMP4:(NSInteger)totalFrameCount view:(VAPView *)container {
